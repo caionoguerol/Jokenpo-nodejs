@@ -42,14 +42,14 @@ describe('Game test', ()=>{
             expect(data).to.equal('Game tied!')})
     });
 
-    it('Should return "Type one of these options for each player: paper, rock, scissors" ', async()=>{
+    it('Should return "Type one of these options for each player (playerOne, playerTwo): paper, rock, scissors" ', async()=>{
         getResult({ playerOne: 'aaaaa', playerTwo: 'sssss' }, function (err, data) { 
-            expect(err).to.equal('Type one of these options for each player: paper, rock, scissors')})
+            expect(err).to.equal('Type one of these options for each player (playerOne, playerTwo): paper, rock, scissors')})
     });
 
-    it('Should return "Type one of these options for each player: paper, rock, scissors" ', async()=>{
+    it('Should return "Type one of these options for each player (playerOne, playerTwo): paper, rock, scissors" ', async()=>{
         getResult({ playerOne: '', playerTwo: '' }, function (err, data) { 
-            expect(err).to.equal('Type one of these options for each player: paper, rock, scissors')})
+            expect(err).to.equal('Type one of these options for each player (playerOne, playerTwo): paper, rock, scissors')})
     });
 
 })
