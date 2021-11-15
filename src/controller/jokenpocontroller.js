@@ -11,20 +11,24 @@ const moves = {
 }
 const getResult =  function getResult(param, callback){
         const {playerOne, playerTwo} = param;
-        
-        if(typeof moves[playerOne] === 'undefined' || typeof moves[playerTwo] === 'undefined' )
-            callback('Type one of this options for each player: paper, rock, scissors', null)
 
-
+        try {
             const winnerPlayer = compareMoves(playerOne, playerTwo);
 
             if(winnerPlayer)
                 callback(null,winnerPlayer)
+        } catch (error) {
+            callback('Type one of these options for each player: paper, rock, scissors', null)
+        }
+           
     }
 
 
     function compareMoves(playerOne, playerTwo){
         
+        if(!playerOne || !playerTwo){
+            throw new Error
+        }
         if(playerOne===playerTwo)
             return "Game tied!"
         
@@ -39,3 +43,4 @@ const getResult =  function getResult(param, callback){
 
 
 module.exports = getResult   
+
