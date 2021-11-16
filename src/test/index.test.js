@@ -1,7 +1,6 @@
 const chai = require('chai');
-const  {assert, expect}  = chai;
+const {expect}  = chai;
 const getResult = require('../controller/jokenpocontroller')
-const app = require('../controller/jokenpocontroller')
 
 describe('Game test', ()=>{
     it('Should return "Player One wins" (rock>scissors)', async()=>{
