@@ -6,6 +6,9 @@
 - Scissors ties with scissors and wins paper
 - Paper ties with paper and wins stone
 
+# Description
+
+API to run jokenpo rules. It was developed on node.js and contains a test suite.
 
 # Getting started
 
