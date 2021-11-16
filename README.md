@@ -17,7 +17,7 @@ API to run jokenpo rules. It was developed on node.js and contains a test suite.
 - On terminal run: npm install
 - On terminal run: npm start
 - The server is running on http://localhost:9500/
-- To use you need to use the path http://localhost:9500/jokenpo with parameters:
+- You need to use the path http://localhost:9500/jokenpo with parameters:
     Example:   http://localhost:9500/jokenpo?playerOne=paper&playerTwo=rock 
 - Your parameters must be like:{playerOne:$YOURVALUE, playerTwo: $YOURVALUE}
 - Change the values (paper, rock, scissors) of paramaters to get other results
