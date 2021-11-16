@@ -11,7 +11,6 @@ const moves = {
 }
 const getResult =  function getResult(param, callback){
         const {playerOne, playerTwo} = param;
-        console.log(param)
         try {
             const winnerPlayer = compareMoves(playerOne, playerTwo);
 
@@ -29,10 +28,9 @@ const getResult =  function getResult(param, callback){
         if(!playerOne || !playerTwo){
             throw new Error
         }
-        
-        
+         
         const moveType = moves[playerOne]
-        console.log(moveType.getMoveResult(playerTwo))
+       
         if(moveType.getMoveResult(playerTwo))
                 return "Player One wins!"
         else if(playerOne===playerTwo)

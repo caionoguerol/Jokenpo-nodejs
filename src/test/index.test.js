@@ -8,7 +8,7 @@ describe('Game test', ()=>{
         getResult({ playerOne: 'rock', playerTwo: 'scissors' }, function (err, data) { 
             expect(data).to.equal('Player One wins!')})
     });
-    it('Should return "Player Two wins" (scissors>rock)', async()=>{
+    it('Should return "Player Two wins" (scissors<rock)', async()=>{
         getResult({ playerOne: 'scissors', playerTwo: 'rock' }, function (err, data) { 
             expect(data).to.equal('Player Two wins!')})
     });
@@ -16,11 +16,11 @@ describe('Game test', ()=>{
         getResult({ playerOne: 'paper', playerTwo: 'rock' }, function (err, data) { 
             expect(data).to.equal('Player One wins!')})
     });
-    it('Should return "Player Two wins" (paper>rock)', async()=>{
+    it('Should return "Player Two wins" (rock<paper)', async()=>{
         getResult({ playerOne: 'rock', playerTwo: 'paper' }, function (err, data) { 
             expect(data).to.equal('Player Two wins!')})
     });
-    it('Should return "Player Two wins" (paper>scissors)', async()=>{
+    it('Should return "Player Two wins" (paper<scissors)', async()=>{
         getResult({ playerOne: 'paper', playerTwo: 'scissors' }, function (err, data) { 
             expect(data).to.equal('Player Two wins!')})
     });
