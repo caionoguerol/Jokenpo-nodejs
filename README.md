@@ -1,28 +1,31 @@
 # Jokenpo-nodejs
 
-# Rules
+# Jokenpo rules
 
-O objetivo é fazer um juiz de Jokenpo que dada a jogada dos dois jogadores informa o resultado da partida.
-
-As regras são as seguintes:
-
-    Pedra empata com Pedra e ganha de Tesoura
-    Tesoura empata com Tesoura e ganha de Papel
-    Papel empata com Papel e ganha de Pedra
+- Stone ties with stone and wins scissors
+- Scissors ties with scissors and wins paper
+- Paper ties with paper and wins stone
 
 
 # Getting started
 
-Follow the steps to run:
-
-- Clone repository
+- Clone repository https://github.com/caionoguerol/Jokenpo-nodejs/
 - Go to folder cd Jokenpo-nodejs
-- On terminal run npm install
-- On terminal run npm start
-- On with postman or browser execute http://localhost:9205/jokenpo?playerOne=paper&playerTwo=rock
-- Your query must be like:{playerOne:$YOURVALUE, playerTwo: $YOURVALUE
-- Change the values of query variables to get other results
+- On terminal run: npm install
+- On terminal run: npm start
+- The server is running on http://localhost:9205/
+- To use you need to use the path http://localhost:9205/jokenpo with parameters:
+    Example:   http://localhost:9205/jokenpo?playerOne=paper&playerTwo=rock 
+- Your parameters must be like:{playerOne:$YOURVALUE, playerTwo: $YOURVALUE}
+- Change the values (paper, rock, scissors) of paramaters to get other results
+- You can use on postman or browser 
 
 # Running tests
-- On terminal run npm test
+- On terminal run: npm test
+
+# API
+
+- GET:
+   
+   /jokenpo (param: playerOne, playerTwo) 
 
